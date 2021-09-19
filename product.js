@@ -5,4 +5,7 @@ export default class Product {
         this._units = units;
         this._cost = cost;
     }
+    getTotalCost() {
+        return this._units * this._cost;
+    }
 }
