@@ -25,7 +25,7 @@ class App {
         let message = "";
         switch (y) {
             case 1:
-                message = "Se agrego el producto " + x + " correctamente.";
+                message = "Se agregó el producto " + x + " correctamente.";
                 break;
             case 2:
                 message = "Se borró el producto " + x + " correctamente.";
@@ -35,8 +35,13 @@ class App {
     }
     _addProduct = () => {
         let product = Product.readForm()
+        let productSize = Product.length;
         if(product === false){
             Swal.fire("Error", "Todos los campos son requeridos", "error");
+            return;
+        }
+        if(productSize >= 20){
+            Swal.fire("Error", "El inventario está lleno", "error");
             return;
         }
         let added = this._registry.add(product);
