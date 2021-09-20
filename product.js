@@ -1,7 +1,7 @@
 export default class Product {
     constructor(id, name, units, cost){
         this._id = id;
-        this._name = name.toUpperCase();
+        this._name = name;
         this._units = units;
         this._cost = cost;
         this._totalCost = this._units * this._cost;
@@ -27,7 +27,7 @@ export default class Product {
     setCost(cost){
         this._cost = cost;
     }
-    static readForm(){
+    readForm(){
 
         let inpId = document.querySelector('#id');
         let inpName = document.querySelector('#name');
