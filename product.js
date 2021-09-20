@@ -4,8 +4,7 @@ export default class Product {
         this._name = name.toUpperCase();
         this._units = units;
         this._cost = cost;
+        this._totalCost = this._units * this._cost;
     }
-    getTotalCost() {
-        return this._units * this._cost;
-    }
+
 }
