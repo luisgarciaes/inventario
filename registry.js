@@ -1,7 +1,6 @@
 export default class  {
     constructor(){
-        this._registry = new Array();
-        
+        this._registry = ["A"];
     }
     add(product) {
         
@@ -26,14 +25,15 @@ export default class  {
         return true;
 
     }
-    _findProduct(product) {
-        let pos = this._registry.findIndex((p) => {
-            if(p.getId() === product.getId() ){
+    _findIndex(){
+        if(p.getId() === product.getId() ){
             return true;
             }
             return false;
 
-        });
+    }
+    _findProduct(product) {
+        let pos = this._registry.findIndex(this._findIndex());
 
         return pos;
     }

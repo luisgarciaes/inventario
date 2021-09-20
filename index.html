@@ -21,23 +21,23 @@
     <div>
       <h2>Formulario</h2>
       <div class="content-info">
-        <form>
+        <form onsubmit="this.reset()">
           <div class="field">
             <label>Id:</label>
-            <input id="id" type="text" size=35>
+            <input id="id" type="text" size=35 required>
             <label>Nombre:</label>
-            <input id="name" type="text" size=35>
+            <input id="name" type="text" size=35 required>
             <label>Unidades:</label>
-            <input id="units" type="text" size=35>
+            <input id="units" type="text" size=35 required>
             <label>Costo individual:</label>
-            <input id="cost" type="text" size=35>
+            <input id="cost" type="text" size=35 required>
           </div>
           <div class="field">
             <br>
-            <input id="btnAdd" type="button" value="Agregar producto">
+            <input type="submit" id="btnAdd" type="button" value="Agregar producto">
             <br>
             <br>
-            <input id="btnAddPosition" type="button" value="Agregar producto en posición especifica">
+            <input type="submit" id="btnAddPosition" type="button" value="Agregar producto en posición especifica">
             <br>
             <br>
             <br>
@@ -54,7 +54,9 @@
             <input id="btnReturnReverse" type="button" value="Recuperar producto inverso">
           </div>
         </form>
+        
       </div>
+
     </div>
     <div>
       <h2>Historial</h2>
